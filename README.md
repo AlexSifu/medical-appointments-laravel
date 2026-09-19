@@ -1,8 +1,7 @@
 # Nexa Salud — Gestión de Citas Médicas (Laravel + SQL Server)
 
 Migración integral del sistema de escritorio **VB.NET / WinForms** (`medical-appointment-system-vbnet`) a una aplicación web
-**Laravel 12 + Blade + Vite + Bootstrap 5.3** sobre **SQL Server**. El alcance es la gestión de reservas y citas; no incluye
-historia clínica, farmacia, laboratorio ni facturación.
+**Laravel 12 + Blade + Vite + Bootstrap 5.3** sobre **SQL Server**. El alcance es la gestión de reservas y citas.
 
 > **Principio de diseño:** SQL Server es la autoridad del negocio. Laravel presenta, valida el formato y orquesta, pero cada regla
 > (permisos, disponibilidad, concurrencia, estados, plazos, auditoría) se resuelve en procedimientos `api.usp_*`.
@@ -105,23 +104,6 @@ Hay una plantilla comentada al final de la sección de seguridad del MASTER.
 
 Las pruebas de integración solo corren contra una BD cuyo nombre termina en `_Test` y se omiten si no está disponible.
 Detalle en [QA_TESTING](docs/QA_TESTING.md).
-
-## Documentación
-
-| Documento | Contenido |
-|---|---|
-| [ARQUITECTURA_LARAVEL](docs/ARQUITECTURA_LARAVEL.md) | Capas, flujo de una petición, decisiones |
-| [MIGRACION_DESDE_VBNET](docs/MIGRACION_DESDE_VBNET.md) | Mapa formulario → módulo web, BD V1 → V2 |
-| [DISENO_BASE_DATOS](docs/DISENO_BASE_DATOS.md) | Esquemas, tablas, índices, restricciones |
-| [CATALOGO_STORED_PROCEDURES](docs/CATALOGO_STORED_PROCEDURES.md) | Los 60 SP: permiso, parámetros, errores, consumidor |
-| [SEGURIDAD](docs/SEGURIDAD.md) | Autenticación, sesiones, CSRF, cabeceras, secretos |
-| [ROLES_PERMISOS](docs/ROLES_PERMISOS.md) | Matriz rol × permiso y rutas |
-| [FLUJOS_RESERVA](docs/FLUJOS_RESERVA.md) | Reservar, cancelar, reprogramar, cerrar; estados |
-| [QA_TESTING](docs/QA_TESTING.md) | Estrategia y resultados de pruebas |
-| [CUMPLIMIENTO_PRUEBA](docs/CUMPLIMIENTO_PRUEBA.md) | Requisito → implementación → evidencia |
-| [GUIA_DEMO_TECNICA](docs/GUIA_DEMO_TECNICA.md) | Guion de demo de 10–15 min y preguntas probables |
-| [BITACORA_CONSTRUCCION](docs/BITACORA_CONSTRUCCION.md) | Cómo se construyó, problemas y soluciones |
-| [evidencias/CHECKLIST](docs/evidencias/CHECKLIST.md) | Lista de verificación final |
 
 ## Datos demo
 
