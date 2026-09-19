@@ -120,6 +120,15 @@ body {
     color: #e6f4f1;
     width: var(--nx-sidebar-w);
 }
+/* Bootstrap fuerza `background-color: transparent !important` en .offcanvas-lg (≥992px):
+   se sobrescribe con mayor especificidad para que el panel sea oscuro en todo tamaño. */
+.app-sidebar.offcanvas-lg {
+    --bs-offcanvas-bg: #0f3d3e;
+    --bs-offcanvas-color: #e6f4f1;
+    background-color: #0f3d3e !important;
+    color: #e6f4f1;
+}
+.app-sidebar .brand-name { color: #fff; }
 .app-sidebar .brand {
     color: #fff;
     text-decoration: none;
@@ -166,7 +175,7 @@ body {
     box-shadow: inset 3px 0 0 var(--nx-teal);
 }
 .app-sidebar .nav-link i { font-size: 1.05rem; color: #a7d8d3; }
-.app-sidebar .nav-link:hover i { color: #e6f4f1; }
+.app-sidebar .nav-link:hover i { color: #fff; }
 .app-sidebar .nav-link.active i { color: #0f3d3e; }
 
 @media (min-width: 992px) {
@@ -178,7 +187,7 @@ body {
     .app-main { margin-left: var(--nx-sidebar-w); }
 }
 @media (max-width: 991.98px) {
-    .app-sidebar.offcanvas-lg { --bs-offcanvas-width: var(--nx-sidebar-w); --bs-offcanvas-bg: #0f3d3e; }
+    .app-sidebar.offcanvas-lg { --bs-offcanvas-width: var(--nx-sidebar-w); }
 }
 
 .app-topbar {
@@ -424,7 +433,7 @@ body {
 .app-content { padding: 1.5rem 1rem 2rem; outline: none; }
 @media (min-width: 768px) { .app-content { padding: 2rem 2rem 2.5rem; } }
 .app-footer { padding: 1rem 2rem 1.5rem; border-top: 1px solid var(--nx-border); }
-.sidebar-foot { color: #7fb8b3; border-top: 1px solid rgba(127, 184, 179, .25); }
+.sidebar-foot { color: #a7d8d3; border-top: 1px solid rgba(127, 184, 179, .25); }
 .text-navy { color: var(--nx-navy) !important; }
 .detail-list dt { font-weight: 500; color: var(--nx-muted); font-size: .875rem; }
 .detail-list dd { margin-bottom: .75rem; }
