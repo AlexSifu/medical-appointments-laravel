@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 419, 'title' => 'La sesión expiró', 'icon' => 'bi-hourglass-bottom', 'tone' => 'warning', 'default' => 'Por seguridad, la página caducó. Vuelve a cargarla e inténtalo otra vez.'])

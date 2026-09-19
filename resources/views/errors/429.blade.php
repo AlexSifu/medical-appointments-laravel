@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 429, 'title' => 'Demasiados intentos', 'icon' => 'bi-speedometer', 'tone' => 'warning', 'default' => 'Hiciste demasiadas solicitudes seguidas. Espera un momento e inténtalo de nuevo.'])

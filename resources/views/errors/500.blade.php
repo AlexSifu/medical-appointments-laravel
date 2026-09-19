@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 500, 'title' => 'Ocurrió un error inesperado', 'icon' => 'bi-exclamation-octagon', 'tone' => 'danger', 'default' => 'No pudimos completar la operación. Si el problema continúa, comunica el código de seguimiento al administrador.'])

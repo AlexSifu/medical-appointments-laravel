@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 503, 'title' => 'Servicio no disponible', 'icon' => 'bi-database-exclamation', 'tone' => 'warning', 'default' => 'El sistema no puede conectarse con la base de datos en este momento. Inténtalo en unos minutos.'])

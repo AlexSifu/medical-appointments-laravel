@@ -1,0 +1,1 @@
+@include('errors.layout', ['code' => 404, 'title' => 'No encontrado', 'icon' => 'bi-search', 'tone' => 'primary', 'default' => 'La página o el registro que buscas no existe o no tienes acceso a él.'])
